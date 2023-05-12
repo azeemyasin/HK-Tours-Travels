@@ -3,12 +3,36 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import cn from "classnames";
 import * as Icons from "@/components/global/Icons";
+import { INavItems } from "@/Interface";
+import { navMockData } from "@/mock/NavbarMockData";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
   let [checkHeader, setCheckHeader] = useState<boolean>(false);
   let [showUpButton, setShowUpButton] = useState<boolean>(false);
   let [showSideMenu, setShowSideMenu] = useState<boolean>(false);
+
+  const navbarItems: INavItems[] = navMockData;
+
+  const renderNavbarItems = navbarItems.map((item: any, index: number) => {
+    return (
+      <React.Fragment key={`${item.id}${index}`}>
+        <Link href={item.itemPath}>
+          <p
+            className={`hover:underline ${
+              router.pathname === `${item.itemPath}` ? "underline" : ""
+            } font-work-sans underline-offset-8 ${
+              showSideMenu
+                ? "text-black text-xl uppercase font-medium"
+                : "text-white text-base font-medium"
+            }`}
+          >
+            {item.itemName}
+          </p>
+        </Link>
+      </React.Fragment>
+    );
+  });
 
   const handleHeader = () => {
     let currentScroll = window.scrollY;
@@ -24,6 +48,17 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleHeader);
     return () => window.removeEventListener("scroll", handleHeader);
+  }, []);
+
+  useEffect(() => {
+    const handleWindowWidth = () => {
+      if (window.innerWidth >= 768) {
+        setShowSideMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleWindowWidth);
+    return () => window.removeEventListener("resize", handleWindowWidth);
   }, []);
 
   const goToTop = () => {
@@ -56,60 +91,7 @@ const Navbar: React.FC = () => {
         </Link>
         <div className="md:flex hidden gap-5 mr-10">
           <nav className="flex justify-center space-x-4">
-            <Link href="/" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/" ? "underline text-red-500" : ""
-                } text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                Home
-              </p>
-            </Link>
-            <Link href="/about" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/about" ? "underline  text-green-500" : ""
-                }text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                About
-              </p>
-            </Link>
-            <Link href="/adventures" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/adventures" ? "underline" : ""
-                }text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                Adventures
-              </p>
-            </Link>
-            <Link href="/shop" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/shop" ? "underline" : ""
-                }text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                Shop
-              </p>
-            </Link>
-            <Link href="/gallery" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/gallery" ? "underline" : ""
-                }text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                Gallery
-              </p>
-            </Link>
-            <Link href="/blog" passHref>
-              <p
-                className={`hover:underline ${
-                  router.pathname === "/blog" ? "underline" : ""
-                }text-white text-base font-medium font-work-sans underline-offset-8`}
-              >
-                Blog
-              </p>
-            </Link>
+            {renderNavbarItems}
           </nav>
         </div>
         <div
@@ -144,12 +126,14 @@ const Navbar: React.FC = () => {
         >
           <Icons.CrossIcon />
         </div>
-        {/* <div className="md:hidden block">{renderNavItems}</div> */}
+        <div className="md:hidden flex flex-col h-full justify-center items-center gap-5">
+          {renderNavbarItems}
+        </div>
       </div>
       {showUpButton && (
         <div
           onClick={goToTop}
-          className="fixed bottom-5 right-5 p-3 rounded-lg bg-[#474545c5] text-white cursor-pointer"
+          className="fixed bottom-5 right-5 p-3 rounded-lg bg-[#474545c5] text-white cursor-pointer z-[99999999999]"
         >
           <Icons.UpArrowIcon />
         </div>

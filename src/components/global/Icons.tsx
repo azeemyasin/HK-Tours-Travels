@@ -220,3 +220,110 @@ export const InstagramIcon: React.FC = () => {
     </>
   );
 };
+
+export const CameraIcon: React.FC = () => {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        className="w-12 h-12"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
+        />
+      </svg>
+    </>
+  );
+};
+
+export const MissionIcon: React.FC = () => {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        className="w-12 h-12"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"
+        />
+      </svg>
+    </>
+  );
+};
+
+export const TeamAdventureIcon: React.FC = () => {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        className="w-10 h-10"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z"
+        />
+      </svg>
+    </>
+  );
+};
+
+export const BicycleIcon: React.FC = () => {
+  return (
+    <>
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        className="w-14 h-14"
+      >
+        <path
+          fill="#000000"
+          d="m8.5 10.5-.6-.8a1 1 0 0 0 .153 1.694L8.5 10.5Zm4 2 .99.141a1 1 0 0 0-.543-1.035l-.447.894Zm-1.49 3.359a1 1 0 1 0 1.98.282l-1.98-.282ZM12.5 7.5l.707-.707A1 1 0 0 0 11.9 6.7l.6.8ZM15 10l-.707.707A1 1 0 0 0 15 11v-1Zm2 1a1 1 0 1 0 0-2v2Zm-9 5a2 2 0 0 1-2 2v2a4 4 0 0 0 4-4H8Zm-2 2a2 2 0 0 1-2-2H2a4 4 0 0 0 4 4v-2Zm-2-2a2 2 0 0 1 2-2v-2a4 4 0 0 0-4 4h2Zm2-2a2 2 0 0 1 2 2h2a4 4 0 0 0-4-4v2Zm2.053-2.606 4 2 .894-1.788-4-2-.894 1.788Zm3.457.965-.5 3.5 1.98.282.5-3.5-1.98-.282ZM9.1 11.3l4-3-1.2-1.6-4 3 1.2 1.6Zm2.693-3.093 2.5 2.5 1.414-1.414-2.5-2.5-1.414 1.414ZM15 11h2V9h-2v2Zm5 5a2 2 0 0 1-2 2v2a4 4 0 0 0 4-4h-2Zm-2 2a2 2 0 0 1-2-2h-2a4 4 0 0 0 4 4v-2Zm-2-2a2 2 0 0 1 2-2v-2a4 4 0 0 0-4 4h2Zm2-2a2 2 0 0 1 2 2h2a4 4 0 0 0-4-4v2Zm-3-9v2a2 2 0 0 0 2-2h-2Zm0 0h-2a2 2 0 0 0 2 2V5Zm0 0V3a2 2 0 0 0-2 2h2Zm0 0h2a2 2 0 0 0-2-2v2Z"
+        />
+      </svg>
+    </>
+  );
+};
+
+export const RightArrowIcon: React.FC = () => {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </>
+  );
+};
