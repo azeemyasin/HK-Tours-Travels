@@ -2,7 +2,7 @@ import React from "react";
 import AboutSection from "@/components/Home/AboutSection";
 import ChooseAdventure from "@/components/Home/ChooseAdventure";
 import Treetops from "@/components/Home/Treetops";
-import SpecialsAndPackages from "./SpecialsAndPackages";
+import SpecialsAndPackages from "@/components/Home/SpecialsAndPackages";
 
 const Home: React.FC = () => {
   return (

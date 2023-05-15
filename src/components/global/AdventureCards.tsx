@@ -18,7 +18,7 @@ const AdventureCards: React.FC<Props> = ({
   return (
     <>
       <div onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}
-        className={cn(`w-[300px] h-[350px] ${cardImage} bg-cover bg-center bg-no-repeat rounded-[40px] relative cursor-pointer transition-all ease-in-out duration-500`, {
+        className={cn(`sm:w-[300px] sm:h-[350px] w-[250px] h-[300px] ${cardImage} bg-cover bg-center bg-no-repeat rounded-[40px] relative cursor-pointer transition-all ease-in-out duration-500`, {
             'scale-100': !showPopup,
             'scale-110': showPopup
         })}
@@ -27,7 +27,7 @@ const AdventureCards: React.FC<Props> = ({
             'h-full': showPopup,
             'h-0': !showPopup
         })}></div>
-        <div className={cn("absolute top-0 w-full overflow-hidden flex flex-col items-center justify-center px-6 transition-all ease-in-out duration-500", {
+        <div className={cn("absolute top-0 w-full overflow-hidden flex flex-col items-center justify-center sm:px-6 px-2 transition-all ease-in-out duration-500", {
             'h-full': showPopup,
             "h-0": !showPopup
         })}>
