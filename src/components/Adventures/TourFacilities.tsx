@@ -29,7 +29,7 @@ const TourFacilities: React.FC = () => {
     <>
       <div className="py-14 w-11/12 mx-auto flex flex-col items-center">
         <h1 className="font-work-sans sm:text-[35px] sm:leading-10 text-2xl font-semibold">
-          What's Included
+          What&#39;s Included
         </h1>
         <p className="font-work-sans text-base sm:font-normal font-light text-[#333333] mt-4 text-center sm:w-4/5">
           Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis
@@ -47,8 +47,8 @@ const TourFacilities: React.FC = () => {
           <h1 className="font-work-sans text-3xl font-semibold">Save 25%</h1>
           <p className="font-work-sans text-base font-normal text-[#54595f] mt-5">
             We offer tours of new and old landmarks & attractions in Pakistan.
-            Experience the best parts of this wonderful country "that never
-            sleep" with fun for the whole family!
+            Experience the best parts of this wonderful country &#34;that never
+            sleep&#34; with fun for the whole family!
           </p>
           <button className="flex items-center gap-3 text-[#6772E5] fill-current mt-16">
             <p className="uppercase font-work-sans text-base font-semibold">view tours specials</p>

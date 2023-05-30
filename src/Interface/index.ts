@@ -25,3 +25,11 @@ export interface IAdventureFacilities {
   facilityTitle: string;
   facilityDesc: string;
 }
+
+export interface IShopCards {
+  id : number;
+  cardImage: string;
+  cardTitle: string;
+  cardPrice: string;
+  cardPriceDiscount?: string;
+}
